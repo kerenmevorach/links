@@ -15,7 +15,7 @@
     --body-leading: 24px;
     --gap: 20px;
     --content-width: 100%;
-    --content-height: 200px;
+    --content-height: 30vh;
 }
 
 body{
@@ -25,7 +25,7 @@ body{
 h1{
     font-size: var(--header);
     margin: 20px;
-    margin-top: 100px;
+    margin-top: 130px;
 }
 
 
@@ -65,21 +65,48 @@ button{
     margin-top: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+}
+
+button:hover{
+    cursor: pointer;
+    transition-duration: 0.7s;
+    background-color: #1aff00;
+}
+
+
+.top-left-button{
     position: absolute;
     left: 0px;
     top: 0px;
 }
 
+.view-buttons{
+    display: flex;
+    margin-top: -26px;
+}
+
+#grid-button{
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+}
+
+#carousel-button{
+    margin-left: 0px;
+    width: 130px;
+    height: 30px;
+    font-size: 18px;
+}
 
 /* content type */
 
-.image-grid{
+#image-grid{
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap);
     margin: 20px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 img{
@@ -110,20 +137,40 @@ img:hover{
 }
 
 .article{
-    color: white;
-    background-color: black;
+    background-color: #1aff00;
+    color: black;
+    filter: saturate(0);
     width: var(--content-width);
     height: var(--content-height);
 }
 
 .article:hover{
-    background-color: #1aff00;
-    color: black;
     filter: saturate(1);
     transition-duration: 1s;
     cursor: pointer;
 }
 
-/* .image-grid > div {    
+/* #image-grid > div {    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 } */
+
+
+@media (min-width: 550px) {
+
+    :root{
+        --header: 48px;
+    }
+
+    #image-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+        
+}
+
+@media (min-width: 950px) {
+
+    #image-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+        
+}
