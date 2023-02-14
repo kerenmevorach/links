@@ -1,0 +1,80 @@
+@font-face {
+	font-family: 'Mondwest-Regular';
+	src: url('fonts/PPMondwest-Regular.otf') format('truetype');
+    font-weight: 100;
+ }
+
+:root{
+    --header: 48px;
+    --article-title: 24px;
+    --article-title-leading: 28px;
+    --body: 20px;
+    --gap: 20px;
+    --content-width: 100%;
+    --content-height: 200px;
+}
+
+h1{
+    font-size: var(--header);
+    font-family: 'Mondwest-Regular', serif;
+    margin: 20px;
+}
+
+h3{
+    font-size: var(--article-title);
+    line-height: var(--article-title-leading);
+    margin: 30px; 
+}
+
+.image-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+    margin: 20px;
+}
+
+img{
+    width: var(--content-width);
+    height: 200px;
+    object-fit: cover; /* Cover the parent. */
+	object-position: right center; /* Side. */
+    filter: saturate(0);
+}
+
+
+img:hover{
+    filter: saturate(1);
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+
+.video{
+    width: var(--content-width);
+    height: 200px;
+    filter: saturate(0);
+}
+
+.video:hover{
+    filter: saturate(1);
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.article{
+    color: white;
+    background-color: black;
+    width: var(--content-width);
+    height: 200px;
+}
+
+.article:hover{
+    background-color: #1aff00;
+    color: black;
+    filter: saturate(1);
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.image-grid > div {    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
