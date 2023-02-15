@@ -21,8 +21,8 @@ carouselButton.onclick= function () {
     body.removeChild(imageGrid);
     
     imageElement.style.display = 'block'
-    leftArrow.style.display = 'block'
-    rightArrow.style.display = 'block'
+    leftArrow.style.display = 'flex'
+    rightArrow.style.display = 'flex'
 
     body.appendChild(imageElement);
     body.appendChild(leftArrow);

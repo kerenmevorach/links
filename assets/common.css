@@ -95,10 +95,22 @@ button:hover{
 
 #left-arrow{
     display: none;
+    width: 60px;
+    font-size: 50px;
+    justify-content: space-around;
+    position: absolute;
+    top: 73%;
+    left: 100px;
 }
 
 #right-arrow{
     display: none;
+    width: 60px;
+    font-size: 50px;
+    justify-content: space-around;
+    position: absolute;
+    top: 73%;
+    right: 100px;
 }
 
 /* content type */
@@ -152,14 +164,18 @@ img:hover{
     cursor: pointer;
 }
 
+#image-carousel{
+    display: flex;
+    justify-content: space-between;
+}
+
 #carousel{
     display: none;
-    width: 88%;
-    height: 300px;
-    margin: 20px;
-    /* position: relative; */
+    width: 334px;
+    height: 250px;
+    position: relative;
     top: 30px;
-    left: calc(50% - 44%);
+    left: calc(50% - 167px);
     object-fit:contain; /* Cover the parent. */
 	object-position: left top; /* Side. */
 }
@@ -173,6 +189,17 @@ img:hover{
     }
 }
 
+@media (min-width: 580px) {
+    #left-arrow{
+        top: 59%;
+        left: 8px;
+    }
+    
+    #right-arrow{
+        top: 59%;
+        right: 8px;
+    }
+}
 
 @media (min-width: 580px) {
     :root{
@@ -195,6 +222,12 @@ img:hover{
     :root{
         --article-title: calc(var(--header)/2);
         --article-title-leading: 32px;
+    }
+
+    #carousel{
+        width: 700px;
+        left: calc(50% - 244px);
+        /* height: 250px; */
     }
 }
 
