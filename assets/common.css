@@ -77,7 +77,7 @@ button:hover{
 
 .view-buttons{
     display: flex;
-    margin-top: -10px;
+    margin-top: -30px;
 }
 
 #grid-button{
@@ -171,11 +171,12 @@ img:hover{
 
 #carousel{
     display: none;
+    margin-left:auto;
+    margin-right:auto;
     width: 334px;
     height: 250px;
     position: relative;
     top: 30px;
-    left: calc(50% - 167px);
     object-fit:contain; /* Cover the parent. */
 	object-position: left top; /* Side. */
 }
@@ -190,6 +191,14 @@ img:hover{
 }
 
 @media (min-width: 580px) {
+    :root{
+        --header: 54px;
+        --header-leading: 55px;
+        --article-title: calc(var(--header)/2);
+        --article-title-leading: 32px;
+        --body-leading: 34px;
+    }
+
     #left-arrow{
         top: 59%;
         left: 8px;
@@ -198,16 +207,6 @@ img:hover{
     #right-arrow{
         top: 59%;
         right: 8px;
-    }
-}
-
-@media (min-width: 580px) {
-    :root{
-        --header: 54px;
-        --header-leading: 55px;
-        --article-title: calc(var(--header)/2);
-        --article-title-leading: 32px;
-        --body-leading: 34px;
     }
 }
 
@@ -225,9 +224,7 @@ img:hover{
     }
 
     #carousel{
-        width: 700px;
-        left: calc(50% - 244px);
-        /* height: 250px; */
+        /* width: 800px; */
     }
 }
 
@@ -240,7 +237,7 @@ img:hover{
 
 @media (min-width: 950px) {
     :root{
-        --header: 70px;
+        --header: 65px;
         --header-leading: 68px;
         --article-title: calc(var(--header)/2.4);
         --article-title-leading: 34px;
@@ -252,13 +249,17 @@ img:hover{
         max-width: 67ch;
     }
 
-    .view-buttons {
-        margin-top: 0px;
+    h1{
+        /* margin-top: 0px; */
     }
     
 
     #image-grid{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #carousel{
+        max-width: 800px;
     }
         
 

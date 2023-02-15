@@ -20,7 +20,7 @@ carouselButton.onclick= function () {
     console.log("carousel")
     body.removeChild(imageGrid);
     
-    imageElement.style.display = 'block'
+    imageElement.style.display = 'flex'
     leftArrow.style.display = 'flex'
     rightArrow.style.display = 'flex'
 
@@ -46,21 +46,66 @@ gridButton.onclick= function () {
 }
 
 
+
+
+// let counter = 1
+
+// imageElement.src = imageArray[0];
+
+// imageElement.onclick = function() {
+//     imageElement.src = imageArray[counter];
+//     counter++;
+
+//     if (counter == imageArray.length +1){
+//         location.reload();
+//         // counter=0
+//     }
+// }
+
 let imageArray = ["assets/images/image1.jpeg","assets/images/image2.jpeg", "assets/images/image3.jpeg", "assets/images/image4.jpeg","assets/images/image5.jpeg", "assets/images/image6.jpeg"]
 
-let counter = 1
 
-imageElement.src = imageArray[0];
+function changeImage(){
 
-imageElement.onclick = function() {
-    imageElement.src = imageArray[counter];
-    counter++;
+    let counter = 0
+      
+      //creating a function for the next button.
+      rightArrow.onclick = function() {
+        counter++;
+        console.log("next")
+        console.log(counter)
+        
+        if (counter <= 5){
+            imageElement.src = imageArray[counter];
+        } else if (counter > 5){
+        counter = 0
+        } 
+      }
 
-    if (counter == imageArray.length +1){
-        location.reload();
-        // counter=0
-    }
-}
+      //creating a function for the previous button.
+      leftArrow.onclick = function() {
+        console.log("previous")
+        counter--;
+        console.log("previous")
+        console.log(counter)
+
+        if (counter > 0 && counter < 6){
+            imageElement.src = imageArray[counter];
+        } else if (counter < 0){
+          counter = 6
+        } 
+      }
+    };
+
+    changeImage();
+
+
+
+
+
+
+
+
 
 
 
