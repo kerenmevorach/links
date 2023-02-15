@@ -11,18 +11,38 @@ let gridButton = document.querySelector('#grid-button');
 let carouselButton = document.querySelector('#carousel-button');
 
 let imageElement = document.querySelector('#carousel');
+let leftArrow = document.querySelector('#left-arrow');
+let rightArrow = document.querySelector('#right-arrow');
+
 
 
 carouselButton.onclick= function () {
     console.log("carousel")
     body.removeChild(imageGrid);
-    body.appendChild(imageCarousel);
+    
+    imageElement.style.display = 'block'
+    leftArrow.style.display = 'block'
+    rightArrow.style.display = 'block'
+
+    body.appendChild(imageElement);
+    body.appendChild(leftArrow);
+    body.appendChild(rightArrow);
+
 }
 
 gridButton.onclick= function () {
     console.log("grid")
-    body.removeChild(imageCarousel);
-    body.appendChild(imageGrid);
+
+    imageElement.style.display = 'none'
+    body.removeChild(imageElement);
+
+    leftArrow.style.display = 'none'
+    body.removeChild(leftArrow);
+
+    rightArrow.style.display = 'none'
+    body.removeChild(rightArrow);
+
+    body.appendChild(imageGrid);   
 }
 
 

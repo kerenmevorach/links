@@ -93,6 +93,14 @@ button:hover{
     font-size: 18px;
 }
 
+#left-arrow{
+    display: none;
+}
+
+#right-arrow{
+    display: none;
+}
+
 /* content type */
 
 #image-grid{
@@ -145,14 +153,15 @@ img:hover{
 }
 
 #carousel{
+    display: none;
     width: 88%;
     height: 300px;
     margin: 20px;
     /* position: relative; */
     top: 30px;
     left: calc(50% - 44%);
-    object-fit: cover; /* Cover the parent. */
-	object-position: right center; /* Side. */
+    object-fit:contain; /* Cover the parent. */
+	object-position: left top; /* Side. */
 }
 /* #image-grid > div {    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
