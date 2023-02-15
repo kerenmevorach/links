@@ -9,11 +9,13 @@
 :root{
     --header: 42px;
     --header-leading: 44px;
+
     --article-title: calc(var(--header)/1.6);
     --article-title-leading: 32px;
-    --button: 22px;
+
     --body: calc(var(--header)/2.1);
     --body-leading: 26px;
+    
     --gap: 20px;
     --content-width: 100%;
     --content-height: 30vh;
@@ -52,9 +54,9 @@ button{
     background: #E5E5E5;
     border: 1.5px solid #767676;
     border-radius: 6px;
-    width: 90px;
-    height: 40px;
-    font-size: var(--button);
+    width: 68px;
+    height: 30px;
+    font-size: 18px;
     margin: 20px;
     margin-top: 30px;
     display: flex;
@@ -99,7 +101,7 @@ button:hover{
     font-size: 50px;
     justify-content: space-around;
     position: absolute;
-    top: 73%;
+    top: 76%;
     left: 100px;
 }
 
@@ -109,7 +111,7 @@ button:hover{
     font-size: 50px;
     justify-content: space-around;
     position: absolute;
-    top: 73%;
+    top: 76%;
     right: 100px;
 }
 
@@ -200,16 +202,15 @@ img:hover{
     }
 
     #left-arrow{
-        top: 59%;
+        top: 60%;
         left: 8px;
     }
     
     #right-arrow{
-        top: 59%;
+        top: 60%;
         right: 8px;
     }
 }
-
 
 @media (min-width: 660px) {
     #image-grid{
@@ -221,10 +222,6 @@ img:hover{
     :root{
         --article-title: calc(var(--header)/2);
         --article-title-leading: 32px;
-    }
-
-    #carousel{
-        /* width: 800px; */
     }
 }
 
@@ -249,8 +246,12 @@ img:hover{
         max-width: 67ch;
     }
 
-    h1{
-        /* margin-top: 0px; */
+    #left-arrow{
+        top: 66%;
+    }
+
+    #right-arrow{
+        top: 66%;
     }
     
 
