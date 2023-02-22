@@ -15,7 +15,18 @@ body{
 h1{
     color:#1aff00;
     -webkit-text-stroke-color: black;
-    /* -webkit-text-stroke-width: 2px; */
+    -webkit-text-stroke-width: 1.3px;
 }
 
+@media (min-width: 580px) {
+    h1{
+        -webkit-text-stroke-width: 1.8px;
+    }
+}
+
+@media (min-width: 950px) {
+    h1{
+        -webkit-text-stroke-width: 2.2px;
+    }
+}
 

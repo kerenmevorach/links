@@ -68,7 +68,8 @@ p{
 
 
 button{
-    background: #1aff00;
+    /* background: #1aff00; */
+    background-color: #dedede;
     border: 1.2px solid #767676;
     border-radius: 6px;
     width: 68px;
@@ -155,6 +156,7 @@ button:hover{
 iframe, .image{
     width: var(--content-width);
     height: var(--content-height);
+    border-radius: 20px;
     object-fit: cover; /* Cover the parent. */
 	object-position: center center; /* Side. */
     filter: saturate(0);
@@ -182,6 +184,7 @@ iframe:hover{
 .link-block, .pdf-block{
     background-color: #1aff00;
     color: black;
+    border-radius: 20px;
     filter: saturate(0);
     width: var(--content-width);
     height: var(--content-height);

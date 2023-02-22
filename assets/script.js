@@ -5,26 +5,33 @@ let closeButton = document.querySelector('#close');
 let aboutPage = document.querySelector('#about-page');
 let viewButtons = document.querySelector('.view-buttons');
 
-let imageGrid = document.querySelector('#image-grid');
+// let imageGrid = document.querySelector('#image-grid');
+
+let gridView = document.querySelector('.grid-view');
+
+
 let imageCarousel = document.querySelector('#image-carousel');
+
 let gridButton = document.querySelector('#grid-button');
 let carouselButton = document.querySelector('#carousel-button');
 
+
+
 let imageElement = document.querySelector('#carousel');
+let carouselView = document.querySelector('#carousel-view');
 let leftArrow = document.querySelector('#left-arrow');
 let rightArrow = document.querySelector('#right-arrow');
 
 
-
 carouselButton.onclick= function () {
     console.log("carousel")
-    body.removeChild(imageGrid);
+    body.removeChild(gridView);
     
-    imageElement.style.display = 'flex'
-    leftArrow.style.display = 'flex'
-    rightArrow.style.display = 'flex'
+    // imageElement.style.display = 'flex'
+    // leftArrow.style.display = 'flex'
+    // rightArrow.style.display = 'flex'
 
-    body.appendChild(imageElement);
+    // body.appendChild(carouselView);
     body.appendChild(leftArrow);
     body.appendChild(rightArrow);
 
@@ -33,16 +40,16 @@ carouselButton.onclick= function () {
 gridButton.onclick= function () {
     console.log("grid")
 
-    imageElement.style.display = 'none'
-    body.removeChild(imageElement);
+    // imageElement.style.display = 'none'
+    // body.removeChild(imageElement);
 
-    leftArrow.style.display = 'none'
-    body.removeChild(leftArrow);
+    // leftArrow.style.display = 'none'
+    // body.removeChild(leftArrow);
 
-    rightArrow.style.display = 'none'
-    body.removeChild(rightArrow);
+    // rightArrow.style.display = 'none'
+    // body.removeChild(rightArrow);
 
-    body.appendChild(imageGrid);   
+    body.appendChild(gridView);   
 }
 
 
@@ -64,6 +71,7 @@ gridButton.onclick= function () {
 
 let imageArray = ["assets/images/image1.jpeg","assets/images/image2.jpeg", "assets/images/image3.jpeg", "assets/images/image4.jpeg","assets/images/image5.jpeg", "assets/images/image6.jpeg"]
 
+//possible to get an array of blocks from the html?
 
 function changeImage(){
 
