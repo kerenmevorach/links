@@ -15,8 +15,8 @@
     --article-title: calc(var(--header)/1.8);
     --article-title-leading: calc(var(--header-leading)/1.8);
 
-    --body: calc(var(--header)/2.1);
-    --body-leading: 26px;
+    --body: calc(var(--header)/2.5);
+    --body-leading: calc(var(--header)/1.9);
     
     --gap: 20px;
     --content-width: 100%;
@@ -63,7 +63,7 @@ p{
     margin: 28px;
     font-size: var(--body);
     line-height: var(--body-leading);
-    max-width: 32ch;
+    max-width: 33ch;
 }
 
 
@@ -226,6 +226,12 @@ iframe:hover{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 } */
 
+@media (min-width: 396px) {
+    p{
+        max-width: 40ch;
+    }
+}
+
 @media (min-width: 490px) {
     p{
         max-width: 53ch;
@@ -238,7 +244,8 @@ iframe:hover{
         --header-leading: 68px;
         --article-title: calc(var(--header)/2.8);
         --article-title-leading: calc(var(--header-leading)/2.4);
-        --body-leading: 34px;
+        --body: calc(var(--header)/3.5);
+        --body-leading: calc(var(--header)/2.5);
     }
 
     h1{
@@ -277,8 +284,8 @@ iframe:hover{
     :root{
         --header: 80px;
         --header-leading: 76px;
-        --body: calc(var(--header)/2.8);
-        --body-leading: 35px;
+        --body: calc(var(--header)/3.5);
+        --body-leading: calc(var(--header)/2.5);
         --article-title: calc(var(--header)/3.8);
         --article-title-leading: calc(var(--header-leading)/3.2);
     }
