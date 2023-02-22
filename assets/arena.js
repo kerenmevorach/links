@@ -10,11 +10,9 @@ const setBasics = (data) => {
 
 	const channelTitle = document.querySelectorAll('.channel-title')
 	const channelDescription = document.querySelectorAll('.channel-description')
-	// const channelCount = document.querySelectorAll('.channel-count')
 
 	channelTitle.forEach((element) => element.innerHTML = data.title)
 	channelDescription.forEach((element) => element.innerHTML = window.markdownit().render(data.metadata.description))
-	// channelCount.forEach((element) => element.innerHTML = `${data.length} blocks`)
 
 	const renderUser = (user, id) => {
 		let containers = document.querySelectorAll(`.${id}`)
@@ -27,7 +25,6 @@ const setBasics = (data) => {
 			template = template.content.cloneNode(true)
 
 			let elements = [
-				'avatar',
 				'fullName',
 				'link',
 			]
@@ -39,8 +36,6 @@ const setBasics = (data) => {
 				}))
 			)
 
-			// elements.avatar.forEach((element) => user.avatar_image.display ? element.src = user.avatar_image.display.replace('/medium_', '/large_').replace('&s=150', '&s=400') : element.remove())
-			// elements.fullName.forEach((element) => user.full_name ? element.innerHTML = user.full_name : element.remove())
 			elements.link.forEach((element) => user.slug ? element.href = `https://www.are.na/${user.slug}` : element.remove())
 
 			container.appendChild(template)
@@ -56,8 +51,6 @@ const setBasics = (data) => {
 
 const parseBlocks = (data) => {
 	let blocks = [
-		// 'audioEmbed',
-		// 'audioFile',
 		'image',
 		'link',
 		'pdf',
@@ -122,35 +115,6 @@ const parseBlocks = (data) => {
 }
 
 
-
-// const showRelativeDate = (date) => {
-// 	const elapsed = Math.round((new Date() - new Date(date)) / 1000)
-
-// 	const minute = 60
-// 	const hour =   minute * 60
-// 	const day =    hour * 24
-// 	const week =   day * 7
-// 	const month =  day * 30
-// 	const year =   month * 12
-
-// 	if      (elapsed < 30)                     return `just now`
-// 	else if (elapsed < minute)                 return `${elapsed} seconds ago`
-// 	else if (elapsed < minute * 2)             return `a minute ago`
-// 	else if (elapsed < hour)                   return `${Math.floor(elapsed / minute)} minutes ago`
-// 	else if (Math.floor(elapsed / hour) == 1)  return `an hour ago`
-// 	else if (elapsed < day)                    return `${Math.floor(elapsed / hour)} hours ago`
-// 	else if (elapsed < day * 2)                return `a day ago`
-// 	else if (elapsed < week)                   return `${Math.floor(elapsed / day)} days ago`
-// 	else if (Math.floor(elapsed / week) == 1)  return `a week ago`
-// 	else if (elapsed < month)                  return `${Math.floor(elapsed / week)} weeks ago`
-// 	else if (Math.floor(elapsed / month) == 1) return `a month ago`
-// 	else if (elapsed < year)                   return `${Math.floor(elapsed / month)} months ago`
-// 	else if (Math.floor(elapsed / year) == 1)  return `a year ago`
-// 	else                                       return `${Math.floor(elapsed / year)} years ago`
-// }
-
-
-
 const renderBlock = (block, type) => {
 	if (!type.template || !type.containers) return
 
@@ -158,9 +122,6 @@ const renderBlock = (block, type) => {
 		let template = type.template.cloneNode(true)
 		let elements = [
 			'title',
-			'imageThumb',
-			'imageSquare',
-			'imageDisplay',
 			'image',
 			'embed',
 			'audio',
@@ -183,9 +144,6 @@ const renderBlock = (block, type) => {
 		const srcOrSrcset = (element, size) => element.tagName == 'IMG' ? element.src = block.image[size].url : element.srcset = block.image[size].url
 
 		elements.title.forEach((element) => block.title ? element.innerHTML = block.title : element.remove())
-		// elements.imageThumb.forEach((element) => block.image ? srcOrSrcset(element, 'thumb') : element.remove())
-		// elements.imageSquare.forEach((element) => block.image ? srcOrSrcset(element, 'square') : element.remove())
-		// elements.imageDisplay.forEach((element) => block.image ? srcOrSrcset(element, 'display') : element.remove())
 		elements.image.forEach((element) => block.image ? srcOrSrcset(element, 'large') : element.remove())
 		elements.embed.forEach((element) => block.embed ? element.innerHTML = block.embed.html : element.remove())
 		elements.audio.forEach((element) => block.attachment ? element.src = block.attachment.url : element.remove())
@@ -206,8 +164,8 @@ const renderBlock = (block, type) => {
 		elements.content.forEach((element) => block.content_html ? element.innerHTML = block.content_html : element.remove())
 		elements.description.forEach((element) => block.description_html ? element.innerHTML = block.description_html : element.remove())
 		elements.type.forEach((element) => element.innerHTML = type.name)
-		elements.timeUpdated.forEach((element) => element.innerHTML = `Updated ${showRelativeDate(block.updated_at)}`)
-		elements.timeCreated.forEach((element) => element.innerHTML = `Created ${showRelativeDate(block.created_at)}`)
+		// elements.timeUpdated.forEach((element) => element.innerHTML = `Updated ${showRelativeDate(block.updated_at)}`)
+		// elements.timeCreated.forEach((element) => element.innerHTML = `Created ${showRelativeDate(block.created_at)}`)
 
 		container.append(template)
 	})
