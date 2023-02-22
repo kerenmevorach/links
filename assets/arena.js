@@ -164,8 +164,6 @@ const renderBlock = (block, type) => {
 		elements.content.forEach((element) => block.content_html ? element.innerHTML = block.content_html : element.remove())
 		elements.description.forEach((element) => block.description_html ? element.innerHTML = block.description_html : element.remove())
 		elements.type.forEach((element) => element.innerHTML = type.name)
-		// elements.timeUpdated.forEach((element) => element.innerHTML = `Updated ${showRelativeDate(block.updated_at)}`)
-		// elements.timeCreated.forEach((element) => element.innerHTML = `Created ${showRelativeDate(block.created_at)}`)
 
 		container.append(template)
 	})

@@ -146,50 +146,63 @@ button:hover{
     cursor: pointer;
 }
 
-.embed{
+/* .embed{
     width: var(--content-width);
     height: var(--content-height);
     object-fit: cover; 
 	object-position: right center; 
     filter: saturate(0);
+} */
+
+iframe{
+    width: var(--content-width);
+    height: var(--content-height);
+    object-fit: fill; 
+	object-position: center center; 
+    filter: saturate(0);
 }
 
-
-.embed:hover{
+iframe:hover{
     filter: saturate(1);
     transition-duration: 0.7s;
     cursor: pointer;
 }
 
+
+/* .embed:hover{
+    filter: saturate(1);
+    transition-duration: 0.7s;
+    cursor: pointer;
+} */
+
+
+/* .video-embed-block{
+    width: var(--content-width);
+    height: var(--content-height);
+    filter: saturate(0);
+    object-fit:contain; 
+	object-position: left top; 
+} */
+
+/* .video-embed-block:hover{
+    filter: saturate(1);
+    transition-duration: 1s;
+    cursor: pointer;
+} */
+
 #video-embed-block{
     width: var(--content-width);
     height: var(--content-height);
     filter: saturate(0);
+    object-fit:contain; /* Cover the parent. */
+	object-position: left top; /* Side. */
 }
 
-#video-embed-block:hover{
-    filter: saturate(1);
-    transition-duration: 1s;
-    cursor: pointer;
-}
-
-.video-embed-block{
-    width: var(--content-width);
-    height: var(--content-height);
-    filter: saturate(0);
-}
-
-.video-embed-block:hover{
-    filter: saturate(1);
-    transition-duration: 1s;
-    cursor: pointer;
-}
-
-.video, .default, .flash, .iframe {
+/* .video, .default, .flash, .iframe {
     width: var(--content-width);
     height: var(--content-height);
     margin-bottom: 20px;
-}
+} */
 
 
 .article{

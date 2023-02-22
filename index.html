@@ -24,7 +24,7 @@
 			<!-- <h2 class="channel-count"></h2>  -->
 			<!-- All the channel “blocks” will be created as children, here. -->
 			<!-- You could move the classes to different section elements to separate the types! -->
-			<ul id="image-grid" class="image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
+			<ul id="image-grid" class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
 			</ul>
 		</section>
 		<!-- These are the templates for the various block types, below. -->
@@ -39,17 +39,9 @@
                 <template id="image-block">
                 <li>
                     <figure class="image-block">
-                        <!-- <h3 class="title"></h3> -->
                         <picture>
-                            <!-- <source class="image-thumb">
-                            <source class="image-square">
-                            <source class="image-display"> -->
                             <img class="image">
                         </picture>
-                        <!-- <a class="link">
-                            <p class="link-title"></p>
-                        </a> -->
-                        <!-- <figcaption class="description"></figcaption> -->
                     </figure>
                 </li>
             </template>
@@ -58,20 +50,9 @@
             <template id="link-block">
                 <li>
                     <figure class="link-block">
-                        <!-- <h3 class="title"></h3> -->
-
-                        <!-- <picture>
-                            <source class="image-thumb">
-                            <source class="image-square">
-                            <source class="image-display">
-                            <img class="image">
-                        </picture> -->
-
                         <a class="link">
                             <h3 class="link-title"></h3>
                         </a>
-                        <!-- <figcaption class="description"></figcaption> -->
-                        <!-- <p class="type"></p> -->
                     </figure>
                 </li>
             </template>
@@ -81,17 +62,9 @@
                 <li>
                     <figure class="pdf-block">
                         <h3 class="title"></h3>
-                        <!-- <picture>
-                            <source class="image-thumb">
-                            <source class="image-square">
-                            <source class="image-display">
-                            <img class="image">
-                        </picture> -->
                         <a class="link"> <!-- PDF link inserts here. -->
                             <h3 class="link-title"></h3> <!-- Repeats the block title. -->
                         </a>
-                        <!-- <figcaption class="description"></figcaption> -->
-                        <!-- <p class="type"></p> -->
                     </figure>
                 </li>
             </template>
@@ -100,90 +73,19 @@
             <template id="video-embed-block">
                 <li>
                     <figure class="video-embed-block">
-                        <!-- <h3 class="title"></h3> -->
-                        <picture>
-                            <!-- <source class="image-thumb">
-                            <source class="image-square"> -->
-                            <!-- <source class="image-display"> -->
-                            <!-- <img class="image"> -->
-                        </picture>
+                        <!-- <picture>
+                            <img class="image">
+                        </picture> -->
 
                         <div class="embed"></div>
-
-                        <a class="link">
-                            <p class="link-title"></p>
-                        </a>
-
-                        <!-- <figcaption class="description"></figcaption> -->
-                        <!-- <p class="type"></p> -->
+<!-- 
+                        <a class="link"></a> -->
                     </figure>
                 </li>
             </template>
 
         </section>
 
-
-
-
-
-
-
-
-        <!-- <header>
-            <button class="top-left-button" id="about"><a href="about.html">About</a></button>
-            <h1>The Fossilization of&nbsp;Flash&nbsp;Games (And&nbsp;My&nbsp;Childhood)</h1>
-        </header>
-
-
-        <div class="view-buttons">
-            <button id="grid-button">Grid</button>
-            <button id="carousel-button">Game</button>
-        </div>
-
-        <section id="image-grid">
-            
-            <div>
-                <img src="assets/images/image1.jpeg">
-            </div>
-
-            <div class="article">
-                <a href="https://lostmediawiki.com/Nickelodeon_Wildlife_Rescue_(partially_lost_series_of_Nickelodeon_flash_games;_2000s)">
-                    <h3>
-                        Nickelodeon Wildlife Rescue (partially lost series of Nickelodeon flash games; 2000s)↗
-                    </h3>
-                </a>
-            </div>
-
-            <div>
-                <img src="assets/images/image3.jpeg">
-            </div>
-
-            <div class="article">
-                <iframe class="video" src="https://www.youtube.com/embed/Dsu8CIpsyxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-
-            <div class="article">
-                <a href="https://arena-attachments.s3.amazonaws.com/20091073/fc1e610610558d4546f59bc02801bdf7.pdf?1674948356">
-                    <h3>
-                        Thoughts on Flash↗
-                    </h3>
-                </a>
-            </div>
-
-
-            <div>
-                <img src="assets/images/image6.jpeg">
-            </div>
-
-            
-        
-        </section>
-
-        <section id="image-carousel">
-            <button id="left-arrow">←</button>
-            <img src="assets/images/image1.jpeg" id="carousel">
-            <button id="right-arrow">→</button>
-        </section> -->
        
     </body>
 </html>
