@@ -183,9 +183,9 @@ const renderBlock = (block, type) => {
 		const srcOrSrcset = (element, size) => element.tagName == 'IMG' ? element.src = block.image[size].url : element.srcset = block.image[size].url
 
 		elements.title.forEach((element) => block.title ? element.innerHTML = block.title : element.remove())
-		elements.imageThumb.forEach((element) => block.image ? srcOrSrcset(element, 'thumb') : element.remove())
-		elements.imageSquare.forEach((element) => block.image ? srcOrSrcset(element, 'square') : element.remove())
-		elements.imageDisplay.forEach((element) => block.image ? srcOrSrcset(element, 'display') : element.remove())
+		// elements.imageThumb.forEach((element) => block.image ? srcOrSrcset(element, 'thumb') : element.remove())
+		// elements.imageSquare.forEach((element) => block.image ? srcOrSrcset(element, 'square') : element.remove())
+		// elements.imageDisplay.forEach((element) => block.image ? srcOrSrcset(element, 'display') : element.remove())
 		elements.image.forEach((element) => block.image ? srcOrSrcset(element, 'large') : element.remove())
 		elements.embed.forEach((element) => block.embed ? element.innerHTML = block.embed.html : element.remove())
 		elements.audio.forEach((element) => block.attachment ? element.src = block.attachment.url : element.remove())
