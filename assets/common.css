@@ -10,24 +10,19 @@
     --header: 42px;
     --header-leading: 44px;
 
-    --article-title: calc(var(--header)/1.3);
-    --article-title-leading: calc(var(--header-leading)/1.3);
+    --article-title: calc(var(--header)/1.8);
+    --article-title-leading: calc(var(--header-leading)/1.8);
 
     --body: calc(var(--header)/2.1);
     --body-leading: 26px;
     
     --gap: 20px;
-    --content-width: 96%;
-    --content-height: 48vh;
+    --content-width: 100%;
+    --content-height: 30vh;
 }
 
 body{
     font-family: 'Mondwest-Regular', serif;
-}
-
-.ytp-cued-thumbnail-overlay-image{
-    /* display: none; */
-    width: 20px;
 }
 
 
@@ -36,7 +31,7 @@ h1{
     line-height: var(--header-leading);
     margin: 20px;
     margin-top: 130px;
-    max-width: 20ch;
+    max-width: 21ch;
 }
 
 h3{
@@ -131,7 +126,7 @@ button:hover{
     margin-top: 10px;
 }
 
-.image{
+iframe, .image{
     width: var(--content-width);
     height: var(--content-height);
     object-fit: cover; /* Cover the parent. */
@@ -146,49 +141,12 @@ button:hover{
     cursor: pointer;
 }
 
-/* .embed{
-    width: var(--content-width);
-    height: var(--content-height);
-    object-fit: cover; 
-	object-position: right center; 
-    filter: saturate(0);
-} */
-
-iframe{
-    width: var(--content-width);
-    height: var(--content-height);
-    object-fit: fill; 
-	object-position: center center; 
-    filter: saturate(0);
-}
 
 iframe:hover{
     filter: saturate(1);
     transition-duration: 0.7s;
     cursor: pointer;
 }
-
-
-/* .embed:hover{
-    filter: saturate(1);
-    transition-duration: 0.7s;
-    cursor: pointer;
-} */
-
-
-/* .video-embed-block{
-    width: var(--content-width);
-    height: var(--content-height);
-    filter: saturate(0);
-    object-fit:contain; 
-	object-position: left top; 
-} */
-
-/* .video-embed-block:hover{
-    filter: saturate(1);
-    transition-duration: 1s;
-    cursor: pointer;
-} */
 
 #video-embed-block{
     width: var(--content-width);
@@ -197,13 +155,6 @@ iframe:hover{
     object-fit:contain; /* Cover the parent. */
 	object-position: left top; /* Side. */
 }
-
-/* .video, .default, .flash, .iframe {
-    width: var(--content-width);
-    height: var(--content-height);
-    margin-bottom: 20px;
-} */
-
 
 .article{
     background-color: #1aff00;
@@ -277,8 +228,8 @@ iframe:hover{
     :root{
         --header: 54px;
         --header-leading: 55px;
-        --article-title: calc(var(--header)/2);
-        --article-title-leading: 32px;
+        --article-title: calc(var(--header)/2.8);
+        --article-title-leading: calc(var(--header-leading)/2.6);
         --body-leading: 34px;
     }
 
@@ -299,12 +250,12 @@ iframe:hover{
     } 
 }
 
-@media (min-width: 730px) {
+/* @media (min-width: 730px) {
     :root{
         --article-title: calc(var(--header)/2);
         --article-title-leading: 32px;
     }
-}
+} */
 
 
 @media (min-width: 800px) {
@@ -317,8 +268,6 @@ iframe:hover{
     :root{
         --header: 65px;
         --header-leading: 68px;
-        --article-title: calc(var(--header)/2.4);
-        --article-title-leading: 34px;
         --body: calc(var(--header)/2.8);
         --body-leading: 35px;
     }
@@ -344,5 +293,11 @@ iframe:hover{
         max-width: 800px;
     }
         
+}
+
+@media (min-width: 1350px) {
+    :root{
+        --content-height: 35vh;
+    }
 
 }
