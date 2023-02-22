@@ -15,6 +15,11 @@
 
          <header>
             <button class="top-left-button" id="about"><a href="about.html">About</a></button>
+            
+            <a href="https://www.are.na/sarah-zhang-yfac5q4qzjs/the-fossilization-of-flash-games-and-my-childhood" id="channel-url">
+				<h1 class="channel-title drop-shadow"></h1> 
+			</a>
+
             <a href="https://www.are.na/sarah-zhang-yfac5q4qzjs/the-fossilization-of-flash-games-and-my-childhood" id="channel-url">
 				<h1 class="channel-title"></h1> 
 			</a>
@@ -24,22 +29,20 @@
 			</a> -->
         </header>
 
+        <div class="view-buttons">
+            <button id="grid-button">Grid</button>
+            <button id="carousel-button">Game</button>
+        </div>
+
         <section >
 			<!-- All the channel “blocks” will be created as children, here. -->
-			<!-- You could move the classes to different section elements to separate the types! -->
 			<ul id="image-grid" class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
 			</ul>
 		</section>
-		<!-- These are the templates for the various block types, below. -->
-		<!-- You can move/nest/remove any of the insertion points! -->
-		<!-- For example, you could only show images for actual image blocks. -->
-		<!-- You could not show the type if you group them by section, above. -->
-		<!-- Template for the channel owner. -->
 
         <!-- images -->
-
         <section>
-                <template id="image-block">
+            <template id="image-block">
                 <li>
                     <figure class="image-block">
                         <picture>
@@ -76,19 +79,17 @@
             <template id="video-embed-block">
                 <li>
                     <figure class="video-embed-block">
-                        <!-- <picture>
-                            <img class="image">
-                        </picture> -->
-
                         <div class="embed"></div>
-<!-- 
-                        <a class="link"></a> -->
                     </figure>
                 </li>
             </template>
-
         </section>
 
+        <section id="image-carousel">
+            <button id="left-arrow">←</button>
+            <img src="assets/images/image1.jpeg" id="carousel">
+            <button id="right-arrow">→</button>
+        </section>
        
     </body>
 </html>
