@@ -20,11 +20,11 @@
 			</a>
         </header>
 
-        <section>
-			<h2 class="channel-count"></h2> <!-- How many blocks. -->
+        <section >
+			<!-- <h2 class="channel-count"></h2>  -->
 			<!-- All the channel “blocks” will be created as children, here. -->
 			<!-- You could move the classes to different section elements to separate the types! -->
-			<ul class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
+			<ul id="image-grid" class="image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
 			</ul>
 		</section>
 		<!-- These are the templates for the various block types, below. -->
@@ -34,92 +34,93 @@
 		<!-- Template for the channel owner. -->
 
         <!-- images -->
-        <template id="image-block">
-			<li>
-				<figure class="image-block">
-					<h3 class="title"></h3>
-					<picture>
-						<source class="image-thumb">
-						<source class="image-square">
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<a class="link">
-						<p class="link-title"></p>
-					</a>
-					<figcaption class="description"></figcaption>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
-				</figure>
-			</li>
-		</template>
 
-        <!-- Links (saved sites). -->
-		<template id="link-block">
-			<li>
-				<figure class="link-block">
-					<h3 class="title"></h3>
-					<picture>
-						<source class="image-thumb">
-						<source class="image-square">
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<a class="link">
-						<p class="link-title"></p>
-					</a>
-					<figcaption class="description"></figcaption>
-					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
-				</figure>
-			</li>
-		</template>
+        <section>
+                <template id="image-block">
+                <li>
+                    <figure class="image-block">
+                        <!-- <h3 class="title"></h3> -->
+                        <picture>
+                            <!-- <source class="image-thumb">
+                            <source class="image-square">
+                            <source class="image-display"> -->
+                            <img class="image">
+                        </picture>
+                        <!-- <a class="link">
+                            <p class="link-title"></p>
+                        </a> -->
+                        <!-- <figcaption class="description"></figcaption> -->
+                    </figure>
+                </li>
+            </template>
 
-        <!-- Did anyone add PDFs? -->
-		<template id="pdf-block">
-			<li>
-				<figure class="pdf-block">
-					<h3 class="title"></h3>
-					<picture>
-						<source class="image-thumb">
-						<source class="image-square">
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<a class="link"> <!-- PDF link inserts here. -->
-						<p class="link-title"></p> <!-- Repeats the block title. -->
-					</a>
-					<figcaption class="description"></figcaption>
-					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
-				</figure>
-			</li>
-		</template>
+            <!-- Links (saved sites). -->
+            <template id="link-block">
+                <li>
+                    <figure class="link-block">
+                        <!-- <h3 class="title"></h3> -->
 
-        <!-- YouTube, Vimeo, etc. -->
-		<template id="video-embed-block">
-			<li>
-				<figure class="video-embed-block">
-					<h3 class="title"></h3>
-					<picture>
-						<source class="image-thumb">
-						<source class="image-square">
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<div class="embed"></div>
-					<a class="link">
-						<p class="link-title"></p>
-					</a>
-					<figcaption class="description"></figcaption>
-					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
-				</figure>
-			</li>
-		</template>
+                        <!-- <picture>
+                            <source class="image-thumb">
+                            <source class="image-square">
+                            <source class="image-display">
+                            <img class="image">
+                        </picture> -->
+
+                        <a class="link">
+                            <h3 class="link-title"></h3>
+                        </a>
+                        <!-- <figcaption class="description"></figcaption> -->
+                        <!-- <p class="type"></p> -->
+                    </figure>
+                </li>
+            </template>
+
+            <!-- Did anyone add PDFs? -->
+            <template id="pdf-block">
+                <li>
+                    <figure class="pdf-block">
+                        <h3 class="title"></h3>
+                        <!-- <picture>
+                            <source class="image-thumb">
+                            <source class="image-square">
+                            <source class="image-display">
+                            <img class="image">
+                        </picture> -->
+                        <a class="link"> <!-- PDF link inserts here. -->
+                            <h3 class="link-title"></h3> <!-- Repeats the block title. -->
+                        </a>
+                        <!-- <figcaption class="description"></figcaption> -->
+                        <!-- <p class="type"></p> -->
+                    </figure>
+                </li>
+            </template>
+
+            <!-- YouTube, Vimeo, etc. -->
+            <template id="video-embed-block">
+                <li>
+                    <figure class="video-embed-block">
+                        <!-- <h3 class="title"></h3> -->
+                        <picture>
+                            <!-- <source class="image-thumb">
+                            <source class="image-square"> -->
+                            <!-- <source class="image-display"> -->
+                            <!-- <img class="image"> -->
+                        </picture>
+
+                        <div class="embed"></div>
+
+                        <a class="link">
+                            <p class="link-title"></p>
+                        </a>
+
+                        <!-- <figcaption class="description"></figcaption> -->
+                        <!-- <p class="type"></p> -->
+                    </figure>
+                </li>
+            </template>
+
+        </section>
 
 
 
