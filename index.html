@@ -8,11 +8,127 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/reset.css">
         <link rel="stylesheet" href="assets/common.css">
+        <script src="assets/arena.js" async defer></script>
         <script src="assets/script.js" async defer></script>
     </head>
     <body>
 
-        <header>
+         <header>
+            <button class="top-left-button" id="about"><a href="about.html">About</a></button>
+            <a href="https://www.are.na/sarah-zhang-yfac5q4qzjs/the-fossilization-of-flash-games-and-my-childhood" id="channel-url">
+				<h1 class="channel-title"></h1> 
+			</a>
+        </header>
+
+        <section>
+			<h2 class="channel-count"></h2> <!-- How many blocks. -->
+			<!-- All the channel “blocks” will be created as children, here. -->
+			<!-- You could move the classes to different section elements to separate the types! -->
+			<ul class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
+			</ul>
+		</section>
+		<!-- These are the templates for the various block types, below. -->
+		<!-- You can move/nest/remove any of the insertion points! -->
+		<!-- For example, you could only show images for actual image blocks. -->
+		<!-- You could not show the type if you group them by section, above. -->
+		<!-- Template for the channel owner. -->
+
+        <!-- images -->
+        <template id="image-block">
+			<li>
+				<figure class="image-block">
+					<h3 class="title"></h3>
+					<picture>
+						<source class="image-thumb">
+						<source class="image-square">
+						<source class="image-display">
+						<img class="image">
+					</picture>
+					<a class="link">
+						<p class="link-title"></p>
+					</a>
+					<figcaption class="description"></figcaption>
+					<p class="time-updated"></p>
+					<p class="time-created"></p>
+				</figure>
+			</li>
+		</template>
+
+        <!-- Links (saved sites). -->
+		<template id="link-block">
+			<li>
+				<figure class="link-block">
+					<h3 class="title"></h3>
+					<picture>
+						<source class="image-thumb">
+						<source class="image-square">
+						<source class="image-display">
+						<img class="image">
+					</picture>
+					<a class="link">
+						<p class="link-title"></p>
+					</a>
+					<figcaption class="description"></figcaption>
+					<p class="type"></p>
+					<p class="time-updated"></p>
+					<p class="time-created"></p>
+				</figure>
+			</li>
+		</template>
+
+        <!-- Did anyone add PDFs? -->
+		<template id="pdf-block">
+			<li>
+				<figure class="pdf-block">
+					<h3 class="title"></h3>
+					<picture>
+						<source class="image-thumb">
+						<source class="image-square">
+						<source class="image-display">
+						<img class="image">
+					</picture>
+					<a class="link"> <!-- PDF link inserts here. -->
+						<p class="link-title"></p> <!-- Repeats the block title. -->
+					</a>
+					<figcaption class="description"></figcaption>
+					<p class="type"></p>
+					<p class="time-updated"></p>
+					<p class="time-created"></p>
+				</figure>
+			</li>
+		</template>
+
+        <!-- YouTube, Vimeo, etc. -->
+		<template id="video-embed-block">
+			<li>
+				<figure class="video-embed-block">
+					<h3 class="title"></h3>
+					<picture>
+						<source class="image-thumb">
+						<source class="image-square">
+						<source class="image-display">
+						<img class="image">
+					</picture>
+					<div class="embed"></div>
+					<a class="link">
+						<p class="link-title"></p>
+					</a>
+					<figcaption class="description"></figcaption>
+					<p class="type"></p>
+					<p class="time-updated"></p>
+					<p class="time-created"></p>
+				</figure>
+			</li>
+		</template>
+
+
+
+
+
+
+
+
+        <!-- <header>
             <button class="top-left-button" id="about"><a href="about.html">About</a></button>
             <h1>The Fossilization of&nbsp;Flash&nbsp;Games (And&nbsp;My&nbsp;Childhood)</h1>
         </header>
@@ -66,7 +182,7 @@
             <button id="left-arrow">←</button>
             <img src="assets/images/image1.jpeg" id="carousel">
             <button id="right-arrow">→</button>
-        </section>
+        </section> -->
        
     </body>
 </html>
