@@ -153,7 +153,8 @@ button:hover{
     margin-top: 10px;
 }
 
-iframe, .image{
+
+iframe{
     width: var(--content-width);
     height: var(--content-height);
     border-radius: 20px;
@@ -165,7 +166,6 @@ iframe, .image{
     animation-duration: 4s;
     animation-direction:normal;
 }
-
 
 .image:hover{
     filter: saturate(1);
@@ -205,6 +205,72 @@ iframe:hover{
     transition-duration: 1s;
     cursor: pointer;
 }
+
+.image{
+    width: var(--content-width);
+    height: var(--content-height);
+    border-radius: 20px;
+    object-fit: cover; /* Cover the parent. */
+	object-position: center center; /* Side. */
+    filter: saturate(0);
+
+    animation-name: colorfade;
+    animation-duration: 4s;
+    animation-direction:normal;
+}
+
+.image-block aside{  
+    display: none;
+    background-color: rgba(0, 255, 30, 0.85);
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    filter: saturate(1);
+    top: 0px;
+    left: 0px;
+    bottom:0px;
+    right: 0px;
+    padding: 100px;
+    z-index: 2;
+    
+    animation-name: none;
+}
+
+.image-focus{
+    filter: saturate(1);
+    width: calc(var(--content-width)/1.3);
+    height: auto;
+    left: calc(50% - calc(var(--content-width)/1.3)/2);
+    top: 15%;
+    position: fixed;
+}
+
+.image-block.active aside {
+    display:block;
+ }
+
+/* ul.image-blocks > li:not(:first-child){  
+    display: none;
+} */
+
+
+
+/* .big-image{
+    padding: 40px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 500px;
+    height: auto;
+}
+
+aside{    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:tomato;
+} */
 
 #image-carousel{
     display: flex;

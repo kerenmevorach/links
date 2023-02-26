@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="assets/common.css">
         <script src="assets/arena.js" async defer></script>
         <script src="assets/script.js" async defer></script>
+        <script src="assets/main.js" async defer></script>
     </head>
     <body>
 
@@ -39,18 +40,6 @@
 			<ul id="image-grid" class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
 			</ul>
 		</section>
-
-        <!-- images -->
-        <section>
-            <template id="image-block">
-                <li>
-                    <figure class="image-block">
-                        <picture>
-                            <img class="image">
-                        </picture>
-                    </figure>
-                </li>
-            </template>
 
             <!-- Links (saved sites). -->
             <template id="link-block">
@@ -84,6 +73,23 @@
                 </li>
             </template>
         </section>
+
+        <!-- images -->
+        <section>
+            <template id="image-block">
+                <li  class="image-block">
+                    <figure>
+                        <picture>
+                            <img class="image">
+                        </picture>
+                    </figure>
+                    
+                    <aside>
+                        <img class="image image-focus">
+                    </aside>
+                </li>
+            </template>
+
 
         <section id="image-carousel">
             <button id="left-arrow">←</button>
