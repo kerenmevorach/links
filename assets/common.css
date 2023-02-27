@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap'); */
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 
@@ -38,6 +38,11 @@ h1{
     color: #1aff00;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.9px;
+}
+
+.small-headline{
+    font-size: calc(var(--header)/3);
+    line-height: calc(var(--header-leading)/3);
 }
 
 
