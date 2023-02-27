@@ -195,11 +195,11 @@ aside .image{
 
 .image-focus{
     filter: saturate(1);
-    width: calc(var(--content-width)/1.8);
+    width: calc(var(--content-width)/1.2);
     height: auto;
-    left: calc(50% - calc(var(--content-width)/1.8)/2);
+    left: calc(50% - calc(var(--content-width)/1.2)/2);
     position: fixed;
-    top: 50%;
+    top: 40%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -255,45 +255,6 @@ aside iframe{
 } */
 
 
-
-/* .big-image{
-    padding: 40px;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 500px;
-    height: auto;
-}
-
-aside{    
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color:tomato;
-} */
-
-#image-carousel{
-    display: flex;
-    justify-content: space-between;
-}
-
-#carousel{
-    display: none;
-    margin-left:auto;
-    margin-right:auto;
-    width: 334px;
-    height: 250px;
-    position: relative;
-    top: 30px;
-    object-fit:contain; /* Cover the parent. */
-	object-position: left top; /* Side. */
-}
-/* #image-grid > div {    
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-} */
-
 @media (min-width: 396px) {
     p{
         max-width: 40ch;
@@ -303,6 +264,10 @@ aside{
 @media (min-width: 490px) {
     p{
         max-width: 53ch;
+    }
+
+    .image-focus{
+        top: 50%;
     }
 }
 
