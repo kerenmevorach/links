@@ -24,16 +24,12 @@
             <a href="https://www.are.na/sarah-zhang-yfac5q4qzjs/the-fossilization-of-flash-games-and-my-childhood" id="channel-url">
 				<h1 class="channel-title"></h1> 
 			</a>
-
-            <!-- <a href="https://www.are.na/sarah-zhang-yfac5q4qzjs/the-fossilization-of-flash-games-and-my-childhood">
-				<h1>The Fossilization of&nbsp;Flash&nbsp;Games (And&nbsp;My&nbsp;Childhood)</h1> 
-			</a> -->
         </header>
 
-        <div class="view-buttons">
+        <!-- <div class="view-buttons">
             <button id="grid-button">Grid</button>
             <button id="carousel-button">Game</button>
-        </div>
+        </div> -->
 
         <section class="grid-view">
 			<!-- All the channel “blocks” will be created as children, here. -->
@@ -66,21 +62,27 @@
 
             <!-- YouTube, Vimeo, etc. -->
             <template id="video-embed-block">
-                <li>
-                    <figure class="video-embed-block">
-                        <div class="embed"></div>
+                <li class="video-embed-block">
+                    <figure>
+                        <picture>
+                            <img class="image image-hover">
+                        </picture>
                     </figure>
+
+                    <aside>
+                        <div class="embed video-focus"></div>
+                        <!-- <img class="embed image-focus"> -->
+                    </aside>
                 </li>
             </template>
         </section>
 
         <!-- images -->
-        <section>
             <template id="image-block">
                 <li  class="image-block">
                     <figure>
                         <picture>
-                            <img class="image">
+                            <img class="image image-hover">
                         </picture>
                     </figure>
                     
@@ -89,18 +91,5 @@
                     </aside>
                 </li>
             </template>
-
-
-        <section id="image-carousel">
-            <button id="left-arrow">←</button>
-
-            <!-- <img src="assets/images/image1.jpeg" id="carousel"> -->
-
-			<!-- <ul id="carousel-view" class="image-blocks link-blocks pdf-blocks video-embed-blocks video-file-blocks">
-			</ul> -->
-
-            <button id="right-arrow">→</button>
-        </section>
-       
     </body>
 </html>
