@@ -36,6 +36,7 @@ h1{
     margin-top: 130px;
     max-width: 21ch;
     color: #1aff00;
+    filter: drop-shadow(-2px 2px 0px black);
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.9px;
     z-index: 2;
@@ -52,7 +53,7 @@ h1{
     line-height: calc(var(--header-leading)/2);
     top: -62px;
     left: 71px;
-    transition: 0.1s ease;
+    /* transition: 0.1s ease; */
     -webkit-text-stroke-width: 0.5px;
 }
 
@@ -137,6 +138,21 @@ button:hover{
     top: 242px;
 }
 
+.black-and-white{
+    width: 100%;
+    height: 31%;
+    background-color: white;
+    filter: saturate(0);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    mix-blend-mode: saturation;
+}
+
+.bw-top{
+    top: 0px;
+}
+
 /* content type */
 
 @keyframes colorfade {
@@ -164,11 +180,11 @@ iframe{
     border-radius: 20px;
     object-fit: cover; /* Cover the parent. */
 	object-position: center center; /* Side. */
-    filter: saturate(0);
+    /* filter: saturate(0); */
 
-    animation-name: colorfade;
-    animation-duration: 4s;
-    animation-direction:normal;
+    /* animation-name: colorfade;
+    animation-duration: 5s;
+    animation-direction:normal; */
 }
 
 .image-hover:hover{
@@ -182,13 +198,13 @@ iframe{
     background-color: #1aff00;
     color: black;
     border-radius: 20px;
-    filter: saturate(0);
+    /* filter: saturate(0); */
     width: var(--content-width);
     height: var(--content-height);
 
-    animation-name: colorfade;
-    animation-duration: 4s;
-    animation-direction:normal;
+    /* animation-name: colorfade;
+    animation-duration: 5s;
+    animation-direction:normal; */
 }
 
 .link-block:hover{
@@ -209,11 +225,11 @@ iframe{
     border-radius: 20px;
     object-fit: cover; /* Cover the parent. */
 	object-position: center center; /* Side. */
-    filter: saturate(0);
+    /* filter: saturate(0); */
 
-    animation-name: colorfade;
+    /* animation-name: colorfade;
     animation-duration: 4s;
-    animation-direction:normal;
+    animation-direction:normal; */
 }
 
 .image-block aside{  
@@ -251,6 +267,11 @@ aside .image{
     filter: saturate(1);
     animation-name: none;
  }
+
+ .saturated-image{
+    filter: saturate(1);
+ }
+ 
 
  .video-embed-block aside{  
     display: none;
@@ -317,6 +338,10 @@ aside iframe{
     .grid-view{
         top: 196px;
     }
+
+    .black-and-white{
+        height: 34%;
+    }
     }
 
 @media (min-width: 580px) {
@@ -354,6 +379,10 @@ aside iframe{
     .grid-view{
         top: 216px;
     }
+
+    .black-and-white{
+        height: 32%;
+    }
 }
 
 
@@ -383,6 +412,7 @@ aside iframe{
 
     h1{
         -webkit-text-stroke-width: 1.8px;
+        filter: drop-shadow(-2.5px 2.5px 0px black);
     }
 
     .small-headline{
@@ -401,6 +431,10 @@ aside iframe{
     #image-grid{
         grid-template-columns: 1fr 1fr 1fr;
     } 
+
+    .black-and-white{
+        height: 32%;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -411,10 +445,10 @@ aside iframe{
     }
 }
 
-@media (min-width: 1350px) {
+/* @media (min-width: 1350px) {
     :root{
         --content-height: 35vh;
     }
 
-}
+} */
 

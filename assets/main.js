@@ -29,18 +29,6 @@ window.arenaCallback = () => {
         }
     })
 
-    // function scrollFunction() {
-    //     const smallHeadline = document.querySelector('.small-headline')
-    //     const body = document.querySelector('body')
-    //     const channelTitle = document.querySelector('.channel-title')
-    
-        // if (document.body.scrollTop > 200) {
-        //     console.log('hi')
-        //     channelTitle.style.fontSize = "20px";
-        //     // channelTitle.classList.add('small-headline')
-        // } 
-        // }
-
         function scrollHeadline() {
             const channelTitle = document.querySelector('.channel-title')
             const aboutButton = document.querySelector('#about')
@@ -56,6 +44,32 @@ window.arenaCallback = () => {
         }
 
         window.addEventListener("scroll", scrollHeadline);
+
+        // document.addEventListener("scroll", function(){
+        //     console.log('hi')
+        //     let clientHeight = document.documentElement.clientHeight;
+        //     let imagesBlocksY = imagesBlocks.getBoundingClientRect().y;
+        //     let imagesBlocksHeight = imagesBlocks.getBoundingClientRect().height;
+
+        //     if (clientHeight > imagesBlocksY + imagesBlocksHeight) {
+        //         block.classList.add('saturated-image')
+        //     } 
+        // })
+
+        // function scrollColor() {
+
+        //     if (200 < document.documentElement.scrollTop || document.documentElement.scrollTop < 400) {
+        //         console.log('color')
+        //         imagesBlocks.classList.add('saturated-image')
+        //         videoBlocks.classList.add('saturated-image')
+        //         // aboutButton.classList.add('small-button')
+        //     } else {
+        //         imagesBlocks.classList.remove('saturated-image')
+        //         videoBlocks.classList.remove('saturated-image')
+        //     }
+        // }
+
+        // window.addEventListener("scroll", scrollColor);
 }
 
 
