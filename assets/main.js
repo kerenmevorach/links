@@ -5,6 +5,11 @@ window.arenaCallback = () => {
     //creates an array 
     const imagesBlocks = document.querySelectorAll('li.image-block')
     const videoBlocks = document.querySelectorAll('li.video-embed-block')
+    const aboutButton = document.querySelector('#about')
+    const closeButton = document.querySelector('#close')
+    const aboutSection = document.querySelector('section.about-page')
+    const channelTitle = document.querySelector('.channel-title')
+
 
     console.log(imagesBlocks)
 
@@ -16,7 +21,6 @@ window.arenaCallback = () => {
         block.querySelector('aside').onclick = () =>{
             block.classList.remove('active')
         }
-
         
     })
 
@@ -30,9 +34,23 @@ window.arenaCallback = () => {
         }
     })
 
+
+    aboutButton.onclick = function(){     
+        console.log('about')
+        aboutSection.classList.add('active')
+        aboutButton.style.display = "none";
+        channelTitle.style.display = "none";
+    };
+
+    closeButton.onclick = function(){  
+        console.log('close')   
+        aboutSection.classList.remove('active')
+        aboutButton.style.display = "flex";
+        channelTitle.style.display = "block";
+    };
+
+
         function scrollHeadline() {
-            const channelTitle = document.querySelector('.channel-title')
-            const aboutButton = document.querySelector('#about')
 
             if (document.documentElement.scrollTop > 50) {
                 console.log('scroll')
@@ -85,11 +103,11 @@ window.arenaCallback = () => {
   
   
 
-    document.body.onscroll = function() {
-        if (imagesBlocks.getBoundingClientRect().bottom <= window.innerHeight) {
-            console.log('hi')
-            document.body.onscroll = "";
-            // alert("The tag just came into view");
+    // document.body.onscroll = function() {
+    //     if (imagesBlocks.getBoundingClientRect().bottom <= window.innerHeight) {
+    //         console.log('hi')
+    //         document.body.onscroll = "";
+    //         // alert("The tag just came into view");
 
-        }
-    }
+    //     }
+    // }

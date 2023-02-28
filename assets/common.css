@@ -161,6 +161,50 @@ button:hover{
     top: 202px;
 }
 
+.about-page{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.about-title{
+    margin-top: 85px;
+}
+
+.about-page aside{  
+    display: none;
+    background-color:#1aff00;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom:0px;
+    right: 0px;
+    z-index: 3;
+}
+
+.about-page.active aside {
+    display:block;
+
+ }
+
+
+.image-focus{
+    filter: saturate(1);
+    width: calc(var(--content-width)/1.2);
+    height: auto;
+    left: calc(50% - calc(var(--content-width)/1.2)/2);
+    position: fixed;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.image-block.active aside {
+    display:block;
+    filter: saturate(1);
+    animation-name: none;
+ }
+
 /* content type */
 
 @keyframes colorfade {
