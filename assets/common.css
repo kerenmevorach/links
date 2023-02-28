@@ -375,12 +375,10 @@ aside iframe{
 }
 
 #footer-image{
-    width: 3%;
-    margin-top: 400px;
-    margin-left: 47%;
-    padding-bottom: 20px;
-    /* position: relative;
-    bottom:-300px; */
+    width: 40px;
+    margin-top: 264px;
+    margin-left: calc(50% - 25px);
+    padding-bottom: 105px;
 }
 
 /* scroll filter  */
@@ -435,6 +433,11 @@ aside iframe{
         top: 170px;
         /* margin-top: 206px; */
     }
+
+    #footer-image{
+        /* padding-bottom: 120px; */
+        margin-top: 330px;
+    }
     }
 
 @media (min-width: 580px) {
@@ -486,6 +489,10 @@ aside iframe{
     .view-buttons{
         top: 190px;
     }
+
+    #footer-image{
+        padding-bottom: 170px;
+    }
 }
 
 
@@ -499,6 +506,10 @@ aside iframe{
     width: 650px;
     height: 400px;
     left: calc(50% - 420px);
+}
+
+#footer-image{
+    padding-bottom: 260px;
 }
 }
 
@@ -550,6 +561,10 @@ aside iframe{
 
     .black-and-white{
         height: 25%;
+    }
+
+    #footer-image{
+        padding-bottom: 240px;
     }
 }
 
