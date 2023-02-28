@@ -1,7 +1,6 @@
 window.arenaCallback = () => {
 	// Put your JavaScript in here!
 	// This will run after Are.na’s API returns your data.
-
     
     //creates an array 
     const imagesBlocks = document.querySelectorAll('li.image-block')
@@ -17,6 +16,8 @@ window.arenaCallback = () => {
         block.querySelector('aside').onclick = () =>{
             block.classList.remove('active')
         }
+
+        
     })
 
     videoBlocks.forEach((block) => {
@@ -44,6 +45,9 @@ window.arenaCallback = () => {
         }
 
         window.addEventListener("scroll", scrollHeadline);
+        }
+
+    
 
         // document.addEventListener("scroll", function(){
         //     console.log('hi')
@@ -70,7 +74,7 @@ window.arenaCallback = () => {
         // }
 
         // window.addEventListener("scroll", scrollColor);
-}
+
 
 
 
