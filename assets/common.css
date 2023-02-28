@@ -106,6 +106,16 @@ button{
 }
 
 
+#backtotop{
+    background-color: #1aff00;
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    width: 30px;
+}
+
+
+
 .view-buttons{
     display: flex;
     /* justify-content: space-between; */
@@ -433,6 +443,12 @@ aside iframe{
         width: 450px;
         height: 300px;
         left: calc(50% - 323px);
+    }
+
+    #backtotop{
+        font-size: 25px;
+        height: 40px;
+        width: 40px;
     }
 }
 
