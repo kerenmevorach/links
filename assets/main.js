@@ -3,12 +3,6 @@ window.arenaCallback = () => {
 	// This will run after Are.na’s API returns your data.
 
     
-    const smallHeadline = document.querySelector('.small-headline')
-    const body = document.querySelector('body')
-    const channelTitle = document.querySelector('channel-title')
-    
-    
-    
     //creates an array 
     const imagesBlocks = document.querySelectorAll('li.image-block')
     const videoBlocks = document.querySelectorAll('li.video-embed-block')
@@ -34,18 +28,50 @@ window.arenaCallback = () => {
             block.classList.remove('active')
         }
     })
+
+    // function scrollFunction() {
+    //     const smallHeadline = document.querySelector('.small-headline')
+    //     const body = document.querySelector('body')
+    //     const channelTitle = document.querySelector('.channel-title')
+    
+        // if (document.body.scrollTop > 200) {
+        //     console.log('hi')
+        //     channelTitle.style.fontSize = "20px";
+        //     // channelTitle.classList.add('small-headline')
+        // } 
+        // }
+
+        function scrollHeadline() {
+            const channelTitle = document.querySelector('.channel-title')
+            const aboutButton = document.querySelector('#about')
+
+            if (document.documentElement.scrollTop > 50) {
+                console.log('scroll')
+                channelTitle.classList.add('small-headline')
+                aboutButton.classList.add('small-button')
+            } else {
+                channelTitle.classList.remove('small-headline')
+                aboutButton.classList.remove('small-button')
+            }
+        }
+
+        window.addEventListener("scroll", scrollHeadline);
 }
 
 
-function scrollFunction() {
-    if (scrollTop > 200) {
-        // channelTitle.classList.add('small-headline')
-        channelTitle.style.fontSize = "20px"
-    } 
-    }
+
+    // if (document.body.scrollTop > 200 || document.body.scrollTop > 80) {
+
+
+// function scrollFunction() {
+//     if (scrollTop > 200) {
+//         channelTitle.classList.add('small-headline')
+//         channelTitle.style.fontSize = "20px"
+//     } 
+//     }
     
-    scrollFunction()
-    window.addEventListener("scroll", scrollFunction);
+    // scrollFunction()
+    // window.addEventListener("scroll", scrollFunction);
 
   
     // function scrollToggle(x) {
