@@ -14,19 +14,22 @@ body{
 
 h1{
     color:#1aff00;
+    /* position: fixed; */
+    margin-top: 100px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1.3px;
 }
 
-@media (min-width: 580px) {
-    h1{
-        -webkit-text-stroke-width: 1.8px;
-    }
+p{
+    /* position: fixed; */
+    margin-top: 26px;
 }
 
-@media (min-width: 950px) {
+
+
+/* @media (min-width: 950px) {
     h1{
         -webkit-text-stroke-width: 2.2px;
     }
-}
+} */
 

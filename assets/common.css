@@ -40,6 +40,12 @@ h1{
     -webkit-text-stroke-width: 0.9px;
 }
 
+.channel-title{
+    position: fixed;
+    margin-top: 91px;
+    padding-bottom: 200px;
+}
+
 .small-headline{
     font-size: calc(var(--header)/3);
     line-height: calc(var(--header-leading)/3);
@@ -90,7 +96,7 @@ button:hover{
 
 
 .top-left-button{
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
 }
@@ -98,6 +104,12 @@ button:hover{
 .view-buttons{
     display: flex;
     margin-top: -30px;
+}
+
+.grid-view{
+    position: relative;
+    /* padding-top: 200px; */
+    top: 242px;
 }
 
 /* content type */
@@ -276,20 +288,13 @@ aside iframe{
     }
 }
 
+@media (min-width: 507px) {
+    .grid-view{
+        top: 196px;
+    }
+    }
 
 @media (min-width: 580px) {
-    :root{
-        --header: 65px;
-        --header-leading: 68px;
-        --article-title: calc(var(--header)/3.4);
-        --article-title-leading: calc(var(--header-leading)/3.3);
-        --body: calc(var(--header)/3.5);
-        --body-leading: calc(var(--header)/2.5);
-    }
-
-    h1{
-        -webkit-text-stroke-width: 1.5px;
-    }
 
     aside iframe{
         width: 450px;
@@ -299,18 +304,34 @@ aside iframe{
 }
 
 @media (min-width: 660px) {
+
     :root{
-        --article-title: calc(var(--header)/4.4);
-        --article-title-leading: calc(var(--header-leading)/4.1);
+        --header: 50px;
+        --header-leading: 55px;
+         --article-title: calc(var(--header)/3.2);
+        --article-title-leading: calc(var(--header-leading)/2.8);
+        --body: calc(var(--header)/2.7);
+        --body-leading: calc(var(--header)/2);
     }
+
+    h1{
+        -webkit-text-stroke-width: 1.3px;
+    }  
+
+
     #image-grid{
         grid-template-columns: 1fr 1fr;
     } 
+
+    .grid-view{
+        top: 216px;
+    }
 }
 
 
-@media (min-width: 800px) {
-  p{
+@media (min-width: 900px) {
+
+    p{
     max-width: 59ch;
   }
 
@@ -322,12 +343,14 @@ aside iframe{
 }
 
 @media (min-width: 950px) {
+
     :root{
-        --header: 80px;
-        --header-leading: 76px;
+        --header: 68px;
+        --header-leading: 70px;
+        --article-title: calc(var(--header)/3.6);
+        --article-title-leading: calc(var(--header-leading)/3);
         --body: calc(var(--header)/3.5);
-        --article-title: calc(var(--header)/4.5);
-        --article-title-leading: calc(var(--header-leading)/3.3);
+        --body-leading: calc(var(--header)/2.5);
     }
 
     h1{
@@ -338,6 +361,10 @@ aside iframe{
         max-width: 67ch;
     }
     
+
+    .grid-view{
+        top: 255px;
+    }
 
     #image-grid{
         grid-template-columns: 1fr 1fr 1fr;
