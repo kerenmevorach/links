@@ -315,10 +315,6 @@ aside .image{
     width: 75%;
     left: 12%;
     justify-content: center;
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto; */
-    /* height: 75%; */
     animation:none;
 }
 
@@ -382,6 +378,13 @@ aside iframe{
     height: 200px;
     position: fixed; 
     filter: saturate(1);
+/*     
+        height: auto;
+        max-height: 80%;
+        width: 75%;
+        left: 12%;
+        justify-content: center;
+        animation:none; */    
 }
 
 #footer-image{
