@@ -81,35 +81,15 @@ window.arenaCallback = () => {
     // if (document.body.scrollTop > 200 || document.body.scrollTop > 80) {
 
 
-// function scrollFunction() {
-//     if (scrollTop > 200) {
-//         channelTitle.classList.add('small-headline')
-//         channelTitle.style.fontSize = "20px"
-//     } 
-//     }
-    
-    // scrollFunction()
-    // window.addEventListener("scroll", scrollFunction);
 
-  
-    // function scrollToggle(x) {
-    //   if (x.matches) { 
-    //     console.log('add')
-    //     window.addEventListener("scroll", scrollFunction);
-    //     largeMobileNav()
-    //   } else {
-    //     console.log('remove')
-    //     window.removeEventListener("scroll",scrollFunction);
-    //     desktopNav()
-    //   }
-    // }
   
   
 
-    // document.body.onscroll = function() {
-    //     if (imagesBlocks.getBoundingClientRect().bottom <= window.innerHeight) {
-    //         document.body.onscroll = "";
-    //         // alert("The tag just came into view");
+    document.body.onscroll = function() {
+        if (imagesBlocks.getBoundingClientRect().bottom <= window.innerHeight) {
+            console.log('hi')
+            document.body.onscroll = "";
+            // alert("The tag just came into view");
 
-    //     }
-    // }
+        }
+    }
