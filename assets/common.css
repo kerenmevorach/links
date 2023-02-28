@@ -122,6 +122,10 @@ button{
     margin-right: -6px;
 }
 
+.wider-button{
+    width: 130px;
+}
+
 
 button{
     /* background: #1aff00; */
@@ -467,9 +471,13 @@ aside iframe{
     }
 
     .each-button{
-        width: 80px;
+        width: 60px;
         height: 30px;
         font-size: 16px;
+    }
+
+    .wider-button{
+        width: 170px;
     }
 
     .view-buttons{
