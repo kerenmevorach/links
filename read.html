@@ -24,50 +24,41 @@
 
         <section>
             <div class="view-buttons">
-                <button class="eacj-button"><a href="index.html"></a>All</button>
-                <button class="each-button" id="selected-button"><a href="games.html">Play</a></button>
-                <button class="each-button"><a href="read.html">Read</a></button>
+                <button class="each-button"><a href="index.html"></a>All</button>
+                <button class="each-button"><a href="games.html">Play</a></button>
+                <button class="each-button" id="selected-button"><a href="read.html">Read</a></button>
             </div>
         </section>
 
         <section class="grid-view">
 			<!-- All the channel “blocks” will be created as children, here. -->
-			<ul id="image-grid" class="image-blocks embed-blocks video-embed-blocks video-file-blocks">
+			<ul id="image-grid" class="link-blocks pdf-blocks text-blocks">
 			</ul>
 		</section>
 
-            <!-- YouTube, Vimeo, etc. -->
-            <template id="video-embed-block">
-                <li class="video-embed-block">
-                    <figure>
-                        <picture>
-                            <img class="image image-hover">
-                        </picture>
+            <!-- Links (saved sites). -->
+            <template id="link-block">
+                <li>
+                    <figure class="link-block">
+                        <a class="link">
+                            <h3 class="link-title"></h3>
+                        </a>
                     </figure>
-
-                    <aside>
-                        <button class="top-left-button">Close</button>
-                        <div class="embed video-focus"></div>
-                    </aside>
                 </li>
             </template>
-        </section>
 
-        <!-- images -->
-            <template id="image-block">
-                <li  class="image-block">
-                    <figure>
-                        <picture>
-                            <img class="image image-hover">
-                        </picture>
+            <!-- Did anyone add PDFs? -->
+            <template id="pdf-block">
+                <li>
+                    <figure class="pdf-block">
+                        <h3 class="title"></h3>
+                        <a class="link"> <!-- PDF link inserts here. -->
+                            <h3 class="link-title"></h3> <!-- Repeats the block title. -->
+                        </a>
                     </figure>
-                    
-                    <aside>
-                        <button class="top-left-button">Close</button>
-                        <img class="image image-focus">
-                    </aside>
                 </li>
             </template>
+
 
             <!-- <div class="black-and-white bw-top"></div> -->
             <div class="black-and-white"></div>

@@ -91,6 +91,10 @@ button{
     user-select: none; /* Standard syntax */
 }
 
+#selected-button{
+    background-color:#1aff00;
+}
+
 .small-button{
     width: 55px;
     height: 25px; 
@@ -104,22 +108,18 @@ button{
 
 .view-buttons{
     display: flex;
+    /* justify-content: space-between; */
     position: relative;
     top: 207px;
+    /* width: 100px; */
     /* margin-top: 206px; */
 }
 
-#grid-button{
-    width: 80px;
+.each-button{
+    width: 50px;
     height: 25px;
     font-size: 12px;
-}
-
-#carousel-button{
-    margin-left: 0px;
-    width: 110px;
-    height: 25px;
-    font-size: 12px;
+    margin-right: -6px;
 }
 
 
@@ -466,15 +466,8 @@ aside iframe{
         top: 224px;
     }
 
-    #grid-button{
-        width: 110px;
-        height: 30px;
-        font-size: 16px;
-    }
-    
-    #carousel-button{
-        margin-left: 0px;
-        width: 150px;
+    .each-button{
+        width: 80px;
         height: 30px;
         font-size: 16px;
     }
@@ -488,7 +481,7 @@ aside iframe{
     } 
 
     .black-and-white{
-        height: 24%;
+        height: 25%;
     }
 }
 
